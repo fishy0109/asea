@@ -1,0 +1,89 @@
+// Sketch colour refs
+//
+$white:                                       #ffffff;
+$black:                                       #000000;
+$nearly-black:                                #121212;
+$dark-grey:                                   #232424;
+$pale-blue:                                   #e1e3e5;
+$pale-grey:                                   #f1f3f5;
+$battleship-grey:                             #6f7c85;
+$dusty-red:                                   #d0343e;
+$gunmetal:                                    #455560;
+$light-grey-blue:                             #b0b7bb;
+$light:                                       #F1F3F5;
+$btn-light-color:                             $gunmetal;
+$text-uni:                                    #55707D;
+
+$colour-black:                                #231f20;
+$colour-classic-blue:                         #0076bb;
+$colour-bright-blue:                          #00aeef;
+$colour-dark-blue:                            #0d4d80;
+$colour-navy:                                 #145091;
+$colour-orange:                               #fdb525;
+$colour-maroon:                               #8a3c67;
+
+$colour-light-grey:                           #ebedf0;
+$colour-grey:                                 #c4c4c4;
+$colour-semi-grey:                            #71767b;
+$colour-dark-grey:                            #262829;
+
+// Colours
+//
+$blue:                                        #25a1db;
+$green:                                       #5cb85c;
+$purple:                                      #9b3a95;
+$red:                                         $dusty-red;
+$primary:                                     $dark-grey;
+$secondary:                                   $dusty-red;
+$success:                                     $green;
+$info:                                        $blue;
+$danger:                                      $dusty-red;
+$pColor:                                      $primary;
+$sColor:                                      $secondary;
+$tColor:                                      $purple;
+$footer-bg:                                   #26313f;
+$footer-bg-alt:                               #313c49;
+$footer-link-text:                            #8c9095;
+$light-grey:                                  $pale-grey;
+
+$font-family-base:                            'PT Serif', serif;
+$headings-font-family:                        'OpenSans Condensed', sans-serif;
+$font-family1:                                $font-family-base;
+$font-family2:                                $headings-font-family;
+$font-size-base:                              1.125rem; // 18px
+
+// Fonts
+//
+$bolder:                                      900;
+$bold:                                        700;
+$semi:                                        600;
+$normal:                                      400;
+$h1-font-size:                                $font-size-base * 2.3; // 46px
+$h2-font-size:                                $font-size-base * 2; // 36px
+$h3-font-size:                                $font-size-base * 1.778; // 32px
+$h4-font-size:                                $font-size-base * 1.35; // 24px
+$h5-font-size:                                $font-size-base * 1.056;
+$h6-font-size:                                $font-size-base;
+
+$h1-font-size-mob:                            35px;
+$h2-font-size-mob:                            30px;
+$h3-font-size-mob:                            26px;
+$h4-font-size-mob:                            22px;
+$mob-font-reduction:                          5px;
+
+$display1-size:                               6rem;
+$display2-size:                               5.5rem;
+$display3-size:                               4.5rem;
+$display4-size:                               3.5rem;
+
+$mini-font-size:                              $font-size-base * 0.7778; // 14px
+$small-font-size:                             $font-size-base * 0.8889; // 16px
+$med-font-size:                               $font-size-base * 1.25; // 22px
+$large-font-size:                             $h4-font-size; // 24px
+
+
+$input-btn-font-family:                       $font-family2;
+$input-font-family:                           $font-family2;
+$input-btn-font-size:                         $small-font-size;
+
+$main-header-nav-link-height:                 44px;

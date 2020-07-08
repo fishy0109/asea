@@ -1,0 +1,82 @@
+$nav-btn-height: 50px;
+
+.btn-3d-hover {
+  display: block;
+  width: 150px;
+  perspective: 1000px;
+  text-decoration: none;
+  position: relative;
+
+  // turn off on ie <= 11
+  @media all and (-ms-high-contrast: none) {
+    .inner {
+      transform: none !important;
+
+      .default {
+        transform: none !important;
+        z-index: 1 !important;
+      }
+
+      .link {
+        transform: none !important;
+        z-index: 0 !important;
+      }
+    }
+  }
+
+  &:hover {
+    .inner {
+      transform: translateZ(-$nav-btn-height/2) rotateX(90deg);
+    }
+  }
+
+  .inner {
+    display: block;
+    width: 100%;
+    height: $nav-btn-height;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-$nav-btn-height/2);
+    transition: transform 0.5s;
+
+    .default,
+    .link {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      width: 100%;
+      height: $nav-btn-height;
+      transition: transform 0.8s;
+
+      // fire this first time to hide button set up
+      opacity: 0;
+      animation: setUpButton 0.5s 0.55s forwards;
+      animation-iteration-count: 1;
+    }
+
+    .default {
+      background: blue;
+      color: white;
+
+      transform: rotateY(0deg) translateZ($nav-btn-height/2);
+    }
+
+    .link {
+      background: red;
+
+      transform: rotateX(-90deg) translateZ($nav-btn-height/2);
+    }
+  }
+}
+
+@keyframes setUpButton {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

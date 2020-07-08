@@ -1,0 +1,47 @@
+header {
+  padding: 1rem 0;
+
+  .site-logo {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .site-logo-safe {
+    img {
+      height: 65px;
+      width: auto;
+    }
+  }
+
+  form {
+    height: 65px;
+  }
+
+
+  nav {
+    .navbar-nav {
+      .nav-item {
+        a {
+          font-family: $headings-font-family;
+          font-size: $font-size-base;
+          font-weight: bold;
+          font-stretch: condensed;
+          color: $colour-dark-blue;
+        }
+      }
+    }
+  }
+}
+
+.site-links {
+  h3 {
+
+  }
+}
+.site-link {
+  .site-link-item {
+
+  }
+}

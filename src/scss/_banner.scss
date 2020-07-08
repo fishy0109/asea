@@ -1,0 +1,40 @@
+$banner-slider-inner-mt: 5rem;
+$banner-slider-inner-pd: 1.5rem;
+$banner-slider-inner-border-radius: 5px;
+
+.slider-banner {
+  .banner {
+    position: relative;
+    max-height: 400px;
+    height: 45vw;
+  }
+
+  .slider-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+  .slider-inner {
+    line-height: 1.7;
+    opacity: .8;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 100%;
+
+    .col-md-6 {
+      background-color: $white;
+      margin-bottom: $banner-slider-inner-mt;
+      padding: $banner-slider-inner-pd;
+      border-radius: $banner-slider-inner-border-radius;
+    }
+  }
+
+  .slick-dots {
+    @extend .container;
+  }
+}

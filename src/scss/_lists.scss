@@ -1,0 +1,43 @@
+.application-process {
+  border-left: 1px solid $text-uni;
+
+  .stage-title {
+    padding: 1rem 0;
+
+    span {
+      padding: 1rem 2rem;
+      background-color: $text-uni;
+      color: $white;
+      border-radius: 0 32px 32px 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+    li {
+      position: relative;
+      padding: 0 0 $spacer * 0.25 $spacer * 2;
+
+      &:before {
+        position: absolute;
+        top: 5px;
+        left: -7px;
+        content: "\f111";
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 700;
+        font-size: 14px;
+        color: $text-uni;
+        background-color: $white;
+      }
+
+      .key-date {
+        color: $text-uni;
+      }
+    }
+  }
+
+}
