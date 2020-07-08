@@ -47,7 +47,8 @@ $footer-link-text:                            #8c9095;
 $light-grey:                                  $pale-grey;
 
 $font-family-base:                            'PT Serif', serif;
-$headings-font-family:                        'OpenSans Condensed', sans-serif;
+$headings-font-family:                        'Open Sans Condensed', sans-serif;
+$body-font-family:                            'Helvetica';
 $font-family1:                                $font-family-base;
 $font-family2:                                $headings-font-family;
 $font-size-base:                              1.125rem; // 18px
@@ -59,10 +60,10 @@ $bold:                                        700;
 $semi:                                        600;
 $normal:                                      400;
 $h1-font-size:                                $font-size-base * 2.3; // 46px
-$h2-font-size:                                $font-size-base * 2; // 36px
-$h3-font-size:                                $font-size-base * 1.778; // 32px
-$h4-font-size:                                $font-size-base * 1.35; // 24px
-$h5-font-size:                                $font-size-base * 1.056;
+$h2-font-size:                                $font-size-base * 1.778; // 32px
+$h3-font-size:                                $font-size-base * 1.667; // 30px
+$h4-font-size:                                $font-size-base * 1.25; // 22px
+$h5-font-size:                                $font-size-base; //18px
 $h6-font-size:                                $font-size-base;
 
 $h1-font-size-mob:                            35px;
@@ -87,3 +88,8 @@ $input-font-family:                           $font-family2;
 $input-btn-font-size:                         $small-font-size;
 
 $main-header-nav-link-height:                 44px;
+
+$weight-bold: 700;
+$weight-semi: 600;
+$weight-normal: 400;
+$weight-light: 300;

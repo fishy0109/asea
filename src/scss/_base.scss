@@ -9,3 +9,65 @@
 .colour-maroon {
   color: $colour-maroon;
 }
+
+.colour-navy {
+  color: $colour-navy;
+}
+
+.colour-orange {
+  color: $colour-orange;
+}
+
+
+.weight-bold {
+  font-weight: $weight-bold;
+}
+
+.weight-semi {
+  font-weight: $weight-semi;
+}
+
+.weight-normal {
+  font-weight: $weight-normal;
+}
+
+.weight-light {
+  font-weight: $weight-light;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headings-font-family;
+  font-weight: $weight-bold;
+}
+
+h1 {
+  line-height: 56px;
+}
+
+h2 {
+  line-height: 38px;
+}
+
+h3 {
+  line-height: 30px;
+}
+
+h4 {
+  line-height: 26px;
+}
+
+.btn {
+  font-family: $headings-font-family;
+}
+
+.btn-primary {
+  background-color: $colour-orange;
+  color: $colour-black;
+  border-color: $colour-orange;
+}
+
+.btn-secondary {
+  background-color: $colour-classic-blue;
+  color: $white;
+  border-color: $colour-classic-blue;
+}
