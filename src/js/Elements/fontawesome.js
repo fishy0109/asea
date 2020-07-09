@@ -20,7 +20,8 @@ import {
   faSlidersH,
   faChevronLeft,
   faChevronRight,
-  faHomeAlt
+  faHomeAlt,
+  faLongArrowRight
 } from '@fortawesome/pro-regular-svg-icons'
 
 import {
@@ -34,7 +35,6 @@ import {
   faSortDown,
   faEnvelope,
   faFilePdf,
-  faFileAlt,
   faMailbox,
   faWalking,
   faPlay,
@@ -56,7 +56,8 @@ import {
   faArrowRight,
   faArrowLeft,
   faExternalLinkSquare,
-  faEnvelopeOpenText
+  faEnvelopeOpenText,
+  faFileAlt
 } from '@fortawesome/pro-light-svg-icons'
 
 export default class FontAwesome {
@@ -78,6 +79,7 @@ export default class FontAwesome {
       faChevronLeft,
       faChevronRight,
       faHomeAlt,
+      faLongArrowRight,
 
       // pro-solid-svg-icons
       faExclamationTriangle, 

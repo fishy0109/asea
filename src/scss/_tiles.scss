@@ -1,0 +1,119 @@
+.news-tiles {
+  margin-bottom: 5rem;
+
+  .news-tile {
+    min-height: 500px;
+    border-radius: 4px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .news-text {
+      padding: 2rem;
+      position: relative;
+      min-height: 250px;
+
+      .font-body-title {
+        margin-top: 1rem;
+      }
+
+      .news-date {
+        position: absolute;
+        bottom: 0;
+        padding: 1rem 0;
+        width: 100%;
+
+        &:before {
+          content: '';
+          display: block;
+          border-top: 1px solid $colour-light-grey;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          margin-left: -2rem;
+        }
+      }
+    }
+  }
+}
+
+.research-tiles {
+  margin-bottom: 6rem;
+
+  .research-tile {
+    min-height: 400px;
+    border-radius: 4px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    padding: 2rem;
+    position: relative;
+
+    .research-date {
+      position: absolute;
+      bottom: 0;
+      padding: 1rem 0;
+      width: 100%;
+
+      &:before {
+        content: '';
+        display: block;
+        border-top: 1px solid $colour-light-grey;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        margin-left: -2rem;
+      }
+    }
+  }
+
+  .document-tile {
+    min-height: 400px;
+    border-radius: 4px;
+    padding: 2rem;
+    position: relative;
+    background-color: $colour-black;
+
+    .documents {
+      list-style: none;
+      padding-left: 0;
+
+      .document-item {
+        padding: 1rem 0;
+        position: relative;
+
+        &:not(:last-child) {
+          &:after {
+            content: '';
+            display: block;
+            border-top: 1px solid $colour-semi-grey;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .document-count {
+      position: absolute;
+      bottom: 0;
+      padding: 1rem 0;
+      width: 100%;
+
+      &:before {
+        content: '';
+        display: block;
+        border-top: 1px solid $colour-semi-grey;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        margin-left: -2rem;
+      }
+    }
+  }
+}

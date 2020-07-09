@@ -4,7 +4,7 @@
 /******/ 		var chunkIds = data[0];
 /******/ 		var moreModules = data[1];
 /******/
-/******/ 		var prefetchChunks = data[3] || [];
+/******/
 /******/ 		// add "moreModules" to the modules object,
 /******/ 		// then flag all "chunkIds" as loaded and fire callback
 /******/ 		var moduleId, chunkId, i = 0, resolves = [];
@@ -21,21 +21,7 @@
 /******/ 			}
 /******/ 		}
 /******/ 		if(parentJsonpFunction) parentJsonpFunction(data);
-/******/ 		// chunk prefetching for javascript
-/******/ 		prefetchChunks.forEach(function(chunkId) {
-/******/ 			if(installedChunks[chunkId] === undefined) {
-/******/ 				installedChunks[chunkId] = null;
-/******/ 				var link = document.createElement('link');
 /******/
-/******/ 				if (__webpack_require__.nc) {
-/******/ 					link.setAttribute("nonce", __webpack_require__.nc);
-/******/ 				}
-/******/ 				link.rel = "prefetch";
-/******/ 				link.as = "script";
-/******/ 				link.href = jsonpScriptSrc(chunkId);
-/******/ 				document.head.appendChild(link);
-/******/ 			}
-/******/ 		});
 /******/ 		while(resolves.length) {
 /******/ 			resolves.shift()();
 /******/ 		}
@@ -57,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/chunk/" + ({"vendors~fontawesome":"vendors~fontawesome","fontawesome":"fontawesome"}[chunkId]||chunkId) + "-" + {"vendors~fontawesome":"9bc378178f5792c79100","fontawesome":"ac81131097b8a39a6c20"}[chunkId] + ".js"
+/******/ 		return __webpack_require__.p + "js/chunk/" + ({}[chunkId]||chunkId) + "-" + {"0":"9a3b1334da0ee843f246","1":"2d8465a102931a78f799"}[chunkId] + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -209,13 +195,8 @@
 /******/ 	var parentJsonpFunction = oldJsonpFunction;
 /******/
 /******/
-/******/ 	var startupResult = (function() {
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/app.js");
-/******/ 	})();
-/******/
-/******/ 	webpackJsonpCallback([[], {}, 0, ["vendors~fontawesome","fontawesome"]]);
-/******/ 	return startupResult;
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -13967,15 +13948,18 @@ function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Elements_Search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Elements/Search */ "./src/js/Elements/Search.js");
-/* harmony import */ var _Elements_slick__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Elements/slick */ "./src/js/Elements/slick.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Elements_Search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Elements/Search */ "./src/js/Elements/Search.js");
+/* harmony import */ var _Elements_slick__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Elements/slick */ "./src/js/Elements/slick.js");
 
 
-Promise.all(/*! import() | fontawesome */[__webpack_require__.e("vendors~fontawesome"), __webpack_require__.e("fontawesome")]).then(__webpack_require__.bind(null, /*! ./Elements/fontawesome */ "./src/js/Elements/fontawesome.js")).then(function (module) {
+
+Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ./Elements/fontawesome */ "./src/js/Elements/fontawesome.js")).then(function (module) {
   new module.default();
 });
-new _Elements_Search__WEBPACK_IMPORTED_MODULE_0__["default"]();
-new _Elements_slick__WEBPACK_IMPORTED_MODULE_1__["default"]();
+new _Elements_Search__WEBPACK_IMPORTED_MODULE_1__["default"]();
+new _Elements_slick__WEBPACK_IMPORTED_MODULE_2__["default"]();
 
 /***/ })
 

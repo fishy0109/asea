@@ -24,11 +24,12 @@ header {
     .navbar-nav {
       .nav-item {
         a {
-          font-family: $headings-font-family;
-          font-size: $font-size-base;
-          font-weight: $weight-bold;
-          font-stretch: condensed;
-          color: $colour-dark-blue;
+          font-size: 20px;
+        }
+
+        &.highlight {
+          background-color: $colour-classic-blue;
+          padding: 5px 2rem;
         }
       }
     }
@@ -42,7 +43,6 @@ header {
 }
 .site-link {
   .site-link-item {
-    font-family: $headings-font-family;
     width: 30%;
   }
 }
@@ -86,7 +86,6 @@ header {
 
     .link-card-btn {
       padding: 1rem 5rem;
-      font-size: $font-size-base;
     }
   }
 }

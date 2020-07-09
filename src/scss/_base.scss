@@ -1,3 +1,4 @@
+//Colours
 .colour-classic-blue {
   color: $colour-classic-blue;
 }
@@ -18,7 +19,7 @@
   color: $colour-orange;
 }
 
-
+//Fonts
 .weight-bold {
   font-weight: $weight-bold;
 }
@@ -56,8 +57,40 @@ h4 {
   line-height: 26px;
 }
 
-.btn {
+.font-label {
   font-family: $headings-font-family;
+  font-weight: $weight-bold;
+  text-transform: uppercase;
+}
+
+.font-label-small {
+  @extend .font-label;
+  font-size: $small-font-size;
+}
+
+.font-heading {
+  font-family: $body-font-family;
+  font-weight: $weight-normal;
+}
+
+.font-section-heading {
+  @extend .font-heading;
+  font-size: $h2-font-size;
+}
+
+.font-body-title {
+  @extend .font-heading;
+  font-size: $large-font-size;
+}
+
+.font-body-small {
+  @extend .font-heading;
+  font-size: $small-font-size;
+}
+
+.btn {
+  @extend .font-label;
+  font-size: $font-size-base;
 }
 
 .btn-primary {
@@ -70,4 +103,11 @@ h4 {
   background-color: $colour-classic-blue;
   color: $white;
   border-color: $colour-classic-blue;
+}
+
+.btn-abstract {
+  background-color: $white;
+  color: $colour-maroon;
+  border-color: $white;
+  width: 100%;
 }
