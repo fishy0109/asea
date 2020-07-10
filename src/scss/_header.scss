@@ -57,6 +57,13 @@ header {
         &.highlight {
           background-color: $colour-classic-blue;
           padding: 5px 2rem;
+          border-radius: $btn-border-radius;
+
+          a {
+            &:after {
+              color: $colour-orange !important;
+            }
+          }
         }
 
         &:not(:first-child) {

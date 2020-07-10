@@ -3,7 +3,7 @@
 
   .news-tile {
     min-height: 500px;
-    border-radius: 4px;
+    border-radius: $tile-border-radius;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.08);
     cursor: pointer;
 
@@ -54,7 +54,7 @@
 
   .research-tile {
     min-height: 400px;
-    border-radius: 4px;
+    border-radius: $tile-border-radius;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.08);
     cursor: pointer;
     padding: 2rem;
@@ -87,7 +87,7 @@
 
   .document-tile {
     min-height: 400px;
-    border-radius: 4px;
+    border-radius: $tile-border-radius;
     padding: 2rem;
     position: relative;
     background-color: $colour-black;

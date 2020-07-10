@@ -13953,6 +13953,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Elements_Search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Elements/Search */ "./src/js/Elements/Search.js");
 /* harmony import */ var _Elements_slick__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Elements/slick */ "./src/js/Elements/slick.js");
 
+window.$ = window.JQuery = jquery__WEBPACK_IMPORTED_MODULE_0___default.a;
 
 
 Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ./Elements/fontawesome */ "./src/js/Elements/fontawesome.js")).then(function (module) {
@@ -13960,6 +13961,9 @@ Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)])
 });
 new _Elements_Search__WEBPACK_IMPORTED_MODULE_1__["default"]();
 new _Elements_slick__WEBPACK_IMPORTED_MODULE_2__["default"]();
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".slick-dots").wrap("<div class='container'>");
+});
 
 /***/ })
 

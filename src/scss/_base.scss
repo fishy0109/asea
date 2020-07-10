@@ -91,6 +91,7 @@ h4 {
 .btn {
   @extend .font-label;
   font-size: $font-size-base;
+  border-radius: $btn-border-radius;
 }
 
 .btn-primary {
