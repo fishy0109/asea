@@ -17,6 +17,29 @@ header {
 
   form {
     height: 65px;
+    position: relative;
+
+    input {
+      &::-webkit-input-placeholder,
+      &::-moz-placeholder {
+        font-family: $body-font-family;
+      }
+
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      position: absolute;
+      right: 1rem;
+      padding: 1.2rem 1rem;
+      z-index: 10;
+
+      i, svg {
+        font-size: 24px;
+        color: $colour-dark-blue;
+      }
+    }
   }
 
 
@@ -25,11 +48,27 @@ header {
       .nav-item {
         a {
           font-size: 20px;
+          
+          &.nav-link-home {
+            font-size: 28px;
+          }
         }
 
         &.highlight {
           background-color: $colour-classic-blue;
           padding: 5px 2rem;
+        }
+
+        &:not(:first-child) {
+          a {
+            &:after {
+              font-family: 'Font Awesome 5 Pro';
+              content: '\f107';
+              position: absolute;
+              color: $colour-bright-blue;
+              padding-left: 5px;
+            }
+          }
         }
       }
     }
@@ -37,6 +76,8 @@ header {
 }
 
 .site-links {
+  margin-top: 4.5rem;
+
   h3 {
     font-family: $body-font-family;
   }
@@ -48,10 +89,56 @@ header {
 }
 
 .banner-hero {
-  background-image: url('../../src/images/atom-hero-ripples@3x.jpg');
-  background-size: contain;
-  background-position: right;
-  height: 500px;
+  position: relative;
+  height: 45vw;
+  max-height: 450px;
+
+  .banner-image {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 65%;
+      max-height: 450px;
+      object-fit: cover;
+      float: right;
+    }
+
+    &:before {
+      background-image: url("../../src/images/fill-1.svg");
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      content: '';
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+  }
+
+  .banner-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: $white;
+    top: 0;
+
+    .hero-link {
+      font-family: $body-font-family;
+      font-weight: $weight-bold;
+      font-size: 20px;
+      color: $white;
+
+      i, svg {
+        font-size: 28px;
+        color: $colour-dark-orange;
+        margin-right: 1rem;
+      }
+    }
+  }
 }
 
 .link-cards {

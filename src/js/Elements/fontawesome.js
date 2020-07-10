@@ -7,10 +7,11 @@ import {library, dom} from '@fortawesome/fontawesome-svg-core'
 
 import {
   faInstagram,
-  faFacebook,
+  faFacebookF,
   faFacebookSquare,
-  faLinkedin,
-  faTwitter
+  faLinkedinIn,
+  faTwitter,
+  faYoutube
 } from '@fortawesome/free-brands-svg-icons'
 
 
@@ -21,7 +22,8 @@ import {
   faChevronLeft,
   faChevronRight,
   faHomeAlt,
-  faLongArrowRight
+  faLongArrowRight,
+  faPlayCircle
 } from '@fortawesome/pro-regular-svg-icons'
 
 import {
@@ -67,10 +69,11 @@ export default class FontAwesome {
 
       // free-brands-svg-icons
       faInstagram,
-      faFacebook,
+      faFacebookF,
       faFacebookSquare,
-      faLinkedin,
+      faLinkedinIn,
       faTwitter,
+      faYoutube,
 
       // pro-regular-svg-icons
       faSearch,
@@ -80,6 +83,7 @@ export default class FontAwesome {
       faChevronRight,
       faHomeAlt,
       faLongArrowRight,
+      faPlayCircle,
 
       // pro-solid-svg-icons
       faExclamationTriangle, 

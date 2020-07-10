@@ -42,7 +42,8 @@ module.exports = env => {
     output: {
       filename: 'js/[name].js',
       chunkFilename: 'js/chunk/[name]-[chunkhash].js',
-      path: resolve(assetPath)
+      path: resolve(assetPath),
+      publicPath: './dev/'
     },
 
     module: {
@@ -96,12 +97,12 @@ module.exports = env => {
           use: [
             {
               // Using file-loader for these files
-              loader: "file-loader",
+              loader: "url-loader",
 
               // In options we can set different things like format
               // and directory to save
               options: {
-                outputPath: 'images'
+                name: 'images/[name].[ext]'
               }
             }
           ]
