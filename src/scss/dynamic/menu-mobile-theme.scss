@@ -1,0 +1,47 @@
+@charset 'utf-8';
+
+// Config
+@import '~@/scss/variables';
+
+
+/**
+ * Just some basic overrides to normal theme.
+ */
+@import '~jquery.mmenu/dist/jquery.mmenu.all.css';
+
+.mm-menu {
+  --mm-color-background: #{$colour-classic-blue};
+  --mm-color-background-emphasis: #{$colour-classic-blue};
+  --mm-color-background-highlight: #{$black};
+  --mm-color-border: #{$colour-classic-blue};
+  --mm-color-text: $black;
+  --mm-color-text-dimmed: #{$black};
+  --mm-color-button: #{$white};
+}
+.mm-listitem {
+  color: $white;
+}
+.mm-listitem:after {
+  left: 0;
+  border-color: $white !important;
+}
+.mm-navbar {
+  border-bottom: 2px solid $white;
+}
+.mm-navbars_top {
+  height: 55px;
+  .mm-searchfield__input {
+    input {
+      background-color: $white;
+      height: 37px;
+    }
+  }
+}
+.mm-searchfield__btn {
+  top: 5px;
+}
+
+.mm-navbar__title {
+  color: $white !important;
+  text-transform: uppercase;
+}

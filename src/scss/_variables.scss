@@ -19,6 +19,7 @@ $colour-classic-blue:                         #0076bb;
 $colour-bright-blue:                          #00aeef;
 $colour-dark-blue:                            #0d4d80;
 $colour-navy:                                 #145091;
+$colour-light-blue:                           #f2f6f8;
 $colour-orange:                               #fdb525;
 $colour-dark-orange:                          #fbb424;
 $colour-maroon:                               #8a3c67;
@@ -47,7 +48,7 @@ $footer-bg-alt:                               #313c49;
 $footer-link-text:                            #8c9095;
 $light-grey:                                  $pale-grey;
 
-$font-family-base:                            'PT Serif', serif;
+$font-family-base:                            'Helvetica';
 $headings-font-family:                        'Open Sans Condensed', sans-serif;
 $body-font-family:                            'Helvetica';
 $font-family1:                                $font-family-base;
@@ -98,3 +99,6 @@ $weight-light: 300;
 
 $tile-border-radius: 4px;
 $btn-border-radius: 3px;
+
+$global-transition-speed: 0.4s;
+$arrow-animation-movement: 5px;

@@ -1,5 +1,5 @@
 header {
-  padding: 1rem 0;
+  padding-top: 1rem;
 
   .site-logo {
     img {
@@ -44,13 +44,51 @@ header {
 
 
   nav {
+    position: relative;
+    padding: 1rem !important;
+
+    &:before {
+      content: '';
+      position: absolute;
+      border-top: 1px solid $colour-light-grey;
+      top: 0;
+      width: 100vw;
+      margin-left: -50vw;
+      left: 50%;
+    }
+
     .navbar-nav {
       .nav-item {
+        &.dropdown {
+          position: static;
+
+          &.show {
+            display: block;
+          }
+
+          &:hover {
+            .dropdown-menu {
+              display: block !important;
+
+              &:hover {
+                display: block !important;
+              }
+            }
+          }
+        }
+
         a {
           font-size: 20px;
+          position: relative;
           
           &.nav-link-home {
             font-size: 28px;
+          }
+
+          &.dropdown-toggle {
+            &:after {
+              border: none;
+            }
           }
         }
 
@@ -67,7 +105,7 @@ header {
         }
 
         &:not(:first-child) {
-          a {
+          a.nav-link {
             &:after {
               font-family: 'Font Awesome 5 Pro';
               content: '\f107';
@@ -75,6 +113,108 @@ header {
               color: $colour-bright-blue;
               padding-left: 5px;
             }
+
+            &:hover {
+
+              &:before {
+                content: '';
+                position: absolute;
+                border-bottom: 2px solid $colour-orange;
+                bottom: 5px;
+                width: calc(100% - 20px);
+              }
+
+              &:after {
+                color: $colour-orange !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-dropdown {
+  display: none;
+  background-color: $colour-light-blue;
+  padding: 5rem 0;
+  margin-top: -1px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+
+  &:before {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background-color: inherit;
+    content: '';
+    margin-left: -50vw;
+    top: 0;
+    left: 50%;
+  }
+
+  &.show {
+    display: block;
+  }
+
+  &:hover {
+    display: block !important;
+  }
+
+  .nav-title {
+    font-size: $h1-font-size;
+    font-family: $headings-font-family;
+    font-weight: $weight-bold;
+
+    i, svg {
+      font-size: $large-font-size;
+      color: $colour-bright-blue;
+      margin-left: 1rem;
+    }
+  }
+
+  .nav-text {
+    font-size: $med-font-size;
+    color: $colour-black;
+  }
+
+  ul.nav-dropdown-menu {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      a {
+        font-size: $med-font-size;
+        color: $colour-black;
+        opacity: .8;
+        display: block;
+        position: relative;
+        padding: 1rem 0;
+
+        @include arrowRightAnimation();
+
+        i, svg {
+          color: $colour-bright-blue;
+          position: absolute;
+          right: 5px;
+        }
+
+        &:before {
+          content: '';
+          border-top: 1px solid $colour-grey;
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
+
+        &:hover {
+          text-decoration: none;
+          color: $colour-navy;
+
+          i, svg {
+            color: $colour-classic-blue;
           }
         }
       }

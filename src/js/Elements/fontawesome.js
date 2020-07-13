@@ -23,7 +23,8 @@ import {
   faChevronRight,
   faHomeAlt,
   faLongArrowRight,
-  faPlayCircle
+  faPlayCircle,
+  faRepeat
 } from '@fortawesome/pro-regular-svg-icons'
 
 import {
@@ -84,6 +85,7 @@ export default class FontAwesome {
       faHomeAlt,
       faLongArrowRight,
       faPlayCircle,
+      faRepeat,
 
       // pro-solid-svg-icons
       faExclamationTriangle, 

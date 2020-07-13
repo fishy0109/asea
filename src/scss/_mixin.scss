@@ -1,0 +1,13 @@
+@mixin arrowRightAnimation() {
+  svg,
+  i {
+    transition: transform $global-transition-speed ease;
+  }
+
+  &:hover {
+    svg,
+    i {
+      transform: translateX($arrow-animation-movement);
+    }
+  }
+}

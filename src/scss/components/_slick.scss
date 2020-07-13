@@ -137,6 +137,7 @@ $slick-opacity-not-active: 0.25 !default;
         height: 5px;
         background-color: $white;
         border-radius: 3px;
+        opacity: .25;
       }
     }
   }
@@ -145,10 +146,7 @@ $slick-opacity-not-active: 0.25 !default;
   color: $blue;
   opacity: 1;
 }
-.slick-dots li button:before {
-  color: #fff;
-  opacity: 1;
-}
+
 .slick-prev {
   z-index: 1;
   &:hover {

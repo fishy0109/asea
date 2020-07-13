@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/chunk/" + ({}[chunkId]||chunkId) + "-" + {"0":"9a3b1334da0ee843f246","1":"ec28044209b3a6bbf53a"}[chunkId] + ".js"
+/******/ 		return __webpack_require__.p + "js/chunk/" + ({}[chunkId]||chunkId) + "-" + {"0":"9a3b1334da0ee843f246","1":"3224356aebf4ad38c217"}[chunkId] + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -13962,7 +13962,15 @@ Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)])
 new _Elements_Search__WEBPACK_IMPORTED_MODULE_1__["default"]();
 new _Elements_slick__WEBPACK_IMPORTED_MODULE_2__["default"]();
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".slick-dots").wrap("<div class='container'>");
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".slick-dots").wrap("<div class='container'>"); // when you hover a toggle show its dropdown menu
+
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".navbar .dropdown-toggle").hover(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().toggleClass("show");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find(".nav-dropdown").toggleClass("show");
+  }); // hide the menu when the mouse leaves the dropdown
+
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".navbar .nav-dropdown").mouseleave(function () {//$(this).removeClass("show");
+  });
 });
 
 /***/ })
