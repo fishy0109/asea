@@ -32,6 +32,11 @@
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
+/******/ 	// object to store loaded CSS chunks
+/******/ 	var installedCssChunks = {
+/******/ 		"app": 0
+/******/ 	}
+/******/
 /******/ 	// object to store loaded and loading chunks
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// Promise = chunk loading, 0 = chunk loaded
@@ -43,7 +48,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/chunk/" + ({}[chunkId]||chunkId) + "-" + {"0":"9a3b1334da0ee843f246","1":"3224356aebf4ad38c217"}[chunkId] + ".js"
+/******/ 		return __webpack_require__.p + "js/chunk/" + ({"vendors~mmenu":"vendors~mmenu"}[chunkId]||chunkId) + "-" + {"0":"9a3b1334da0ee843f246","1":"558b1d9409a453e6d921","2":"04a266cfa3f54ab86be2","3":"37da38d696838feebbf6","vendors~mmenu":"776229de479b619d0551"}[chunkId] + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -75,6 +80,47 @@
 /******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
 /******/ 		var promises = [];
 /******/
+/******/
+/******/ 		// mini-css-extract-plugin CSS loading
+/******/ 		var cssChunks = {"1":1,"3":1};
+/******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
+/******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
+/******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
+/******/ 				var href = "css/chunks/" + ({"vendors~mmenu":"vendors~mmenu"}[chunkId]||chunkId) + "-" + "7a293beb603fb471" + ".css";
+/******/ 				var fullhref = __webpack_require__.p + href;
+/******/ 				var existingLinkTags = document.getElementsByTagName("link");
+/******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
+/******/ 					var tag = existingLinkTags[i];
+/******/ 					var dataHref = tag.getAttribute("data-href") || tag.getAttribute("href");
+/******/ 					if(tag.rel === "stylesheet" && (dataHref === href || dataHref === fullhref)) return resolve();
+/******/ 				}
+/******/ 				var existingStyleTags = document.getElementsByTagName("style");
+/******/ 				for(var i = 0; i < existingStyleTags.length; i++) {
+/******/ 					var tag = existingStyleTags[i];
+/******/ 					var dataHref = tag.getAttribute("data-href");
+/******/ 					if(dataHref === href || dataHref === fullhref) return resolve();
+/******/ 				}
+/******/ 				var linkTag = document.createElement("link");
+/******/ 				linkTag.rel = "stylesheet";
+/******/ 				linkTag.type = "text/css";
+/******/ 				linkTag.onload = resolve;
+/******/ 				linkTag.onerror = function(event) {
+/******/ 					var request = event && event.target && event.target.src || fullhref;
+/******/ 					var err = new Error("Loading CSS chunk " + chunkId + " failed.\n(" + request + ")");
+/******/ 					err.code = "CSS_CHUNK_LOAD_FAILED";
+/******/ 					err.request = request;
+/******/ 					delete installedCssChunks[chunkId]
+/******/ 					linkTag.parentNode.removeChild(linkTag)
+/******/ 					reject(err);
+/******/ 				};
+/******/ 				linkTag.href = fullhref;
+/******/
+/******/ 				var head = document.getElementsByTagName("head")[0];
+/******/ 				head.appendChild(linkTag);
+/******/ 			}).then(function() {
+/******/ 				installedCssChunks[chunkId] = 0;
+/******/ 			}));
+/******/ 		}
 /******/
 /******/ 		// JSONP chunk loading for javascript
 /******/
@@ -13956,11 +14002,23 @@ __webpack_require__.r(__webpack_exports__);
 window.$ = window.JQuery = jquery__WEBPACK_IMPORTED_MODULE_0___default.a;
 
 
-Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ./Elements/fontawesome */ "./src/js/Elements/fontawesome.js")).then(function (module) {
+Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(2)]).then(__webpack_require__.bind(null, /*! ./Elements/fontawesome */ "./src/js/Elements/fontawesome.js")).then(function (module) {
   new module.default();
 });
 new _Elements_Search__WEBPACK_IMPORTED_MODULE_1__["default"]();
 new _Elements_slick__WEBPACK_IMPORTED_MODULE_2__["default"]();
+/**
+ * Mobile menu
+ */
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
+  var width = document.documentElement.clientWidth;
+  var done = document.body.classList.contains('mm-once');
+  document.body.classList.add('mm-once');
+  Promise.all(/*! import() */[__webpack_require__.e(3), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ./Elements/mmenu */ "./src/js/Elements/mmenu.js")).then(function (module) {
+    new module.default();
+  });
+});
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(".slick-dots").wrap("<div class='container'>"); // when you hover a toggle show its dropdown menu
 

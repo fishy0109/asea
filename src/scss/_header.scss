@@ -288,6 +288,46 @@ header {
   }
 }
 
+.landing-hero {
+  position: relative;
+  height: 25vw;
+  max-height: 250px;
+
+  .landing-image {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 50%;
+      max-height: 250px;
+      object-fit: cover;
+      float: right;
+    }
+
+    &:before {
+      background-image: url("../../src/images/short-blue-banner.svg");
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      content: '';
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+  }
+
+  .landing-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: $white;
+    top: 0;
+  }
+}
+
 .link-cards {
   .link-card {
     width: 48%;

@@ -1,4 +1,4 @@
-import '@/scss/dynamic/menu-mobile-theme.scss'
+import '../../scss/dynamic/menu-mobile-theme.scss'
 import $ from 'jquery'
 
 /**
@@ -12,7 +12,7 @@ export default class Mmenu {
     constructor() {
 
       this.icon = $('#mobile-menu-button')
-      this.nav = $('#mobile-menu')
+      this.nav = $('#navbarMain')
       this.nav[0].removeAttribute('style')
       this.nav[0].removeAttribute('hidden')
 

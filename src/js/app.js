@@ -11,6 +11,22 @@ import('./Elements/fontawesome').then(module => {
 new Search();
 new Slick();
 
+/**
+ * Mobile menu
+ */
+
+$(window).on('resize', () => {
+  let width = document.documentElement.clientWidth;
+  let done = document.body.classList.contains('mm-once');
+  document.body.classList.add('mm-once')
+
+  import(
+    './Elements/mmenu'
+    ).then(module => {
+    new module.default()
+  })
+});
+
 $(document).ready(function() {
   $(".slick-dots").wrap("<div class='container'>");
 
